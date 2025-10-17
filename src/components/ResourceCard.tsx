@@ -1,10 +1,5 @@
 import { Clock } from 'lucide-react';
-import type { Resource } from '../types/resource';
-
-interface ResourceCardProps {
-  resource: Resource;
-  onClick: () => void;
-}
+import type { ResourceCardProps } from '../types/types';
 
 export function ResourceCard({ resource, onClick }: ResourceCardProps) {
   return (

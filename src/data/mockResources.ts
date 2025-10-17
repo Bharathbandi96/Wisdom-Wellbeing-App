@@ -1,11 +1,11 @@
-import type { Resource } from '../types/resource';
+import type { Resource } from '../types/types';
 
 export const mockResources: Resource[] = [
   {
     id: '001',
     category: 'Podcasts',
     title: 'Mindful Moments',
-    thumbnail: 'https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumbnail: 'https://www.datocms-assets.com/93767/1753971746-photo.jpg',
     tags: ['wellbeing', 'mindfulness', 'relaxation'],
     duration: 25,
     description: 'A calming podcast focused on mindfulness techniques for daily life. Discover practical ways to incorporate mindfulness into your busy schedule and find peace in the present moment.',
@@ -45,7 +45,7 @@ export const mockResources: Resource[] = [
     id: '005',
     category: 'Fitness',
     title: '10-Minute Morning Stretch',
-    thumbnail: 'https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumbnail: 'https://www.datocms-assets.com/93767/1753972252-photo.jpg',
     tags: ['mobility', 'energy', 'routine'],
     duration: 10,
     description: 'A short and effective stretching routine to energize your mornings. Wake up your muscles and improve flexibility with these gentle movements suitable for all levels.',
@@ -65,7 +65,7 @@ export const mockResources: Resource[] = [
     id: '007',
     category: 'Podcasts',
     title: 'The Wellness Hour',
-    thumbnail: 'https://images.pexels.com/photos/7698445/pexels-photo-7698445.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumbnail: 'https://images.pexels.com/photos/3759657/pexels-photo-3759657.jpeg?auto=compress&cs=tinysrgb&w=800',
     tags: ['health', 'lifestyle', 'inspiration'],
     duration: 45,
     description: 'Join us for an inspiring conversation with leading wellness experts. Discover the latest trends in holistic health and get motivated to transform your lifestyle.',
@@ -155,7 +155,7 @@ export const mockResources: Resource[] = [
     id: '016',
     category: 'Recipes',
     title: 'Anti-Inflammatory Golden Milk',
-    thumbnail: 'https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumbnail: 'https://www.shutterstock.com/image-photo/turmeric-golden-milk-latte-spices-600nw-2403798969.jpg',
     tags: ['nutrition', 'relaxation', 'health'],
     duration: 5,
     description: 'A warming turmeric-based beverage with powerful anti-inflammatory properties. Perfect for evening relaxation and supporting overall wellness.',
@@ -165,7 +165,7 @@ export const mockResources: Resource[] = [
     id: '017',
     category: 'Fitness',
     title: 'HIIT Workout for Beginners',
-    thumbnail: 'https://images.pexels.com/photos/4164662/pexels-photo-4164662.jpeg?auto=compress&cs=tinysrgb&w=800',
+    thumbnail: 'https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=800',
     tags: ['energy', 'routine', 'fitness'],
     duration: 20,
     description: 'High-intensity interval training designed for those new to fitness. Build strength and endurance with this accessible, time-efficient workout routine.',

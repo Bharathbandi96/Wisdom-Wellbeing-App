@@ -1,15 +1,5 @@
 import { Search, SlidersHorizontal } from 'lucide-react';
-import type { ResourceCategory, SortOption } from '../types/resource';
-
-interface FilterBarProps {
-  searchQuery: string;
-  onSearchChange: (query: string) => void;
-  selectedCategory: ResourceCategory | 'All';
-  onCategoryChange: (category: ResourceCategory | 'All') => void;
-  sortOption: SortOption;
-  onSortChange: (option: SortOption) => void;
-  categories: (ResourceCategory | 'All')[];
-}
+import type { FilterBarProps, SortOption } from '../types/types';
 
 export function FilterBar({
   searchQuery,
