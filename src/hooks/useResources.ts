@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { mockResources } from '../data/mockResources';
-import type { Resource } from '../types/resource';
+import type { Resource } from '../types/types';
 
 export function useResources() {
   const [resources, setResources] = useState<Resource[]>([]);

@@ -1,4 +1,4 @@
-import type { Resource, ResourceCategory, SortOption } from '../types/resource';
+import type { Resource, ResourceCategory, SortOption } from '../types/types';
 
 export function filterResources(
   resources: Resource[],

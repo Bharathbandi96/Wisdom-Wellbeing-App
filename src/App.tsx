@@ -5,7 +5,7 @@ import { ResourceCard } from './components/ResourceCard';
 import { ResourceModal } from './components/ResourceModal';
 import { FilterBar } from './components/FilterBar';
 import { filterResources, sortResources, groupByCategory } from './utils/resourceFilters';
-import type { Resource, ResourceCategory, SortOption } from './types/resource';
+import type { Resource, ResourceCategory, SortOption } from './types/types';
 
 const CATEGORIES: (ResourceCategory | 'All')[] = [
   'All',
@@ -69,7 +69,7 @@ function App() {
               <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
                 Wisdom Wellbeing
               </h1>
-              <p className="text-slate-600 text-sm">Resource Centre</p>
+              <p className="text-slate-600 text-sm">Your Resource Centre for Better Living</p>
             </div>
           </div>
         </div>
@@ -140,8 +140,11 @@ function App() {
 
       <footer className="bg-white/80 backdrop-blur-sm mt-16 py-8 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-slate-600 text-sm">
-            Your healthy advantage
+          <p className="text-sm text-slate-500">
+            Your journey to better wellbeing starts here. Explore our resources and find what works for you.
+          </p>
+          <p className="text-xs text-slate-500 mt-2">
+            Wisdom Wellbeing Resource Centre
           </p>
         </div>
       </footer>
