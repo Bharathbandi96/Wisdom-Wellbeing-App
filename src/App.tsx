@@ -2,9 +2,10 @@ import { useState, useMemo } from 'react';
 import { Heart, Loader2 } from 'lucide-react';
 import { useResources } from './hooks/useResources';
 import { ResourceCard } from './components/ResourceCard';
+import { ResourceModal } from './components/ResourceModal';
 import { FilterBar } from './components/FilterBar';
 import { filterResources, sortResources, groupByCategory } from './utils/resourceFilters';
-import type { ResourceCategory, SortOption } from './types/resource';
+import type { Resource, ResourceCategory, SortOption } from './types/resource';
 
 const CATEGORIES: (ResourceCategory | 'All')[] = [
   'All',
@@ -18,6 +19,7 @@ const CATEGORIES: (ResourceCategory | 'All')[] = [
 
 function App() {
   const { resources, loading, error } = useResources();
+  const [selectedResource, setSelectedResource] = useState<Resource | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<ResourceCategory | 'All'>('All');
   const [sortOption, setSortOption] = useState<SortOption>('date-newest');
@@ -32,7 +34,7 @@ function App() {
   }, [filteredAndSortedResources]);
 
   const shouldGroupByCategory = selectedCategory === 'All' && !searchQuery;
-  
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -72,6 +74,7 @@ function App() {
           </div>
         </div>
       </header>
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <FilterBar
           searchQuery={searchQuery}
@@ -105,6 +108,7 @@ function App() {
                     <ResourceCard
                       key={resource.id}
                       resource={resource}
+                      onClick={() => setSelectedResource(resource)}
                     />
                   ))}
                 </div>
@@ -126,12 +130,14 @@ function App() {
                 <ResourceCard
                   key={resource.id}
                   resource={resource}
+                  onClick={() => setSelectedResource(resource)}
                 />
               ))}
             </div>
           </div>
         )}
       </main>
+
       <footer className="bg-white/80 backdrop-blur-sm mt-16 py-8 border-t border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-slate-600 text-sm">
@@ -139,8 +145,15 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {selectedResource && (
+        <ResourceModal
+          resource={selectedResource}
+          onClose={() => setSelectedResource(null)}
+        />
+      )}
     </div>
-  )
+  );
 }
 
 export default App;

@@ -3,11 +3,13 @@ import type { Resource } from '../types/resource';
 
 interface ResourceCardProps {
   resource: Resource;
+  onClick: () => void;
 }
 
-export function ResourceCard({ resource }: ResourceCardProps) {
+export function ResourceCard({ resource, onClick }: ResourceCardProps) {
   return (
     <article
+      onClick={onClick}
       className="group cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
     >
       <div className="relative h-48 overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
