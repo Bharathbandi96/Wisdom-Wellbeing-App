@@ -13,9 +13,11 @@ export function ResourceModal({ resource, onClose }: ResourceModalProps) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fadeIn"
+      onClick={onClose}
     >
       <div
         className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto animate-slideUp"
+        onClick={(e) => e.stopPropagation()}
       >
         <div className="relative h-72 overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
           <img
