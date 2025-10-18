@@ -5,7 +5,7 @@ export function ResourceCard({ resource, onClick }: ResourceCardProps) {
   return (
     <article
       onClick={onClick}
-      className="group cursor-pointer bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      className="group cursor-pointer bg-white rounded-xl overflow-hidden drop-shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
     >
       <div className="relative h-48 overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200">
         <img
@@ -35,10 +35,6 @@ export function ResourceCard({ resource, onClick }: ResourceCardProps) {
             </span>
           ))}
         </div>
-
-        <p className="text-sm text-slate-600 line-clamp-2">
-          {resource.description}
-        </p>
       </div>
     </article>
   );
