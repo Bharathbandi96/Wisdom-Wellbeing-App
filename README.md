@@ -63,7 +63,7 @@ src/
  ├── test/                # Unit tests
  ├── types/               # TypeScript interfaces
  ├── utils/               # Helper functions
- ├── App.tsx/             # Layout component
+ ├── App.tsx              # Layout component
  └── main.tsx             # Root component
 
 ```
